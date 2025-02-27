@@ -1,0 +1,227 @@
+Ex No: 1. BASIC UNIX COMMANDS
+
+Aim   To Study about basic Unix Commands.
+
+FILE MANIPULATION COMMANDS
+
+Command	: Cat
+Purpose	: It is used to display the contents of the file as well as used to create a new file.
+Syntax	: cat <file name >
+Example	: $ cat devi
+
+Command	: More
+
+Purpose	: It is used to display the contents of the file on the screen at a time. Syntax	: more <file name >
+Example	: $ more devi
+
+
+Command	: Wc
+Purpose	: It is used to count the number of lines ,words and characters in a file or group of files.
+Syntax	: wc [options] <file name > Example	: $ wc –l devi
+
+
+Command	: File
+Purpose	: It is used to determine the type of the file. Syntax	: file <file name >
+Example	: $ file devi
+
+
+Command	: Spell
+Purpose	: It is used to find the spelling errors in the file. Syntax	: spell [options] <file name >
+Example	: $ spell -b devi
+
+Command	: Split
+Purpose	: It is used to split the given file into smaller pieces of given size. Syntax	: split –size <file name > < splitted file name >
+Example	: $ split –2 devi de
+
+Command	: CP
+Purpose	: It is used to copy one or more files.
+Syntax	: cat <source file name > <destination file name> Example	: $ cp devi latha
+
+
+
+Command	: MV
+Purpose	: It is used to move a file within a directory with different names and also used to move a file to different directory with its original name.
+Syntax	: mv <source file name > <destination file name> Example	: $ mv devi jeya
+
+Command	: RM
+Purpose	: It is used to remove a file from the disk. Syntax	: rm <file name >
+Example	: $ rm devi
+
+
+1.  a) GENERAL PURPOSE COMMANDS
+
+Command	: Banner
+Purpose	: It is used to display its argument in large letters. Syntax	: banner < string >
+Example	: $ banner BOOM
+
+
+Command	: Who
+Purpose	: It is used to get the information about all the users currently working in the system.
+Syntax	: who
+Example	: $ who
+
+Command	: Who am i
+Purpose	: It is used to know in which terminal the user is currently logged on. Syntax	: who am i
+Example	: $ who am I
+
+Command	: Date
+Purpose	: It is used to display the system date and time. Syntax	: date
+Example	: $ date
+Command	: Cal
+Purpose	: It prints the calender for the specified year and month. Syntax	: cal <month> <year>
+Example	: $ cal 05 2003
+Command	: Id
+Purpose	: It is used to display the login name. Syntax	: id
+Example	: $ id
+
+Command	: Clear
+Purpose	: It is used to clear the screen.
+
+
+
+Syntax : clear Example	: $ clear
+
+Command	: Tput
+Purpose	: It is used to manipulate the screen. Syntax	: tput < attributes >
+Example	: $ tput rmso
+
+
+Command	: Uname
+Purpose	: It is used to display the details about the OS in which we are working. Syntax	: uname [options]
+Example	: $ uname –n
+
+Command	: Tty
+Purpose	: It is used to know the terminal name on which we work. Syntax	: tty
+Example	: $ tty
+
+Command	: Pwd
+Purpose	: It is used to display the absolute pathname of current working directory. Syntax	: pwd
+Example	: $ pwd
+
+
+Command	: Bc
+Purpose	: It is used to perform simple mathematical calculations. Syntax	: bc <operation>
+Example	: $ bc 3+5 8 ^d
+
+Command	: Ls
+Purpose	: It is used to display the files in the current working directory. Syntax	: ls [options] <arguments>
+Example	: $ ls –p
+
+Command	: Echo
+Purpose	: It echoes the argument on the standard output device. Syntax	: echo [options] <string>
+Example	: $ echo „BOOM‟
+Command	: Man
+Purpose	: It gives details about the unix commands. Syntax	: man < command name >
+Example	: $ man echo
+
+
+
+1. b) COMMAND GROUPING & FILTER COMMANDS
+
+Command	: Head
+Purpose	: It is used to display the top portion of the file. Syntax	: head [options] <file name>
+Example	: $ head -5 devi
+
+Command	: Tail
+Purpose	: It is used to display the bottom portion of the file. Syntax	: tail [options] <file name >
+Example	: $ tail –5 devi
+
+Command	: Pr
+Purpose	: It is used to display the contents of the file by separating them into pages and each page begins with the header information.
+Syntax	: pr [options] <file name > Example	: $ pr devi
+
+Command	: Cut
+Purpose	: It is used to extract selected fields or columns from each line of one or more files and display them on the standard output device.
+Syntax	: cut [options] <file name > Example	: $ cut –c5 devi
+
+Command	: Paste
+Purpose	: It concatenates the line from each input file column by column with tab characters in between them.
+Syntax	: paste [options] <file name > Example	: $ paste f1 f2
+
+Command	: Join
+Purpose	: It is used to extracts common lines from two sorted files and there should be the common field in both file.
+Syntax	: join [options] <file name1 > <file name 2> Example	: $ join –a1 f1 f2
+
+Command	: Uniq
+Purpose	: It compares adjacent lines in the file and displays the output by eliminating duplicate adjacent lines in it.
+Syntax	: uniq [options] <file name > Example	: $ uniq -c devi
+Command	: Sort
+Purpose	: It sorts one or more files based on ASCII sequence and also to merge the file.
+Syntax	: sort [options] <file name > Example	: $ sort -r devi
+
+
+
+Command	: Nl
+Purpose	: It is used to add the line numbers to the file. Syntax	: nl [options] [filename]
+Example	: $ nl devi
+
+Command	: Tr
+Purpose	: It is used to translate or delete a character or a string from the standard input to produce the required output.
+Syntax	: tr [options] <string1> <string2> Example	: $ tr –t „a‟ „b‟ < devi>
+
+Command   : Tee
+Purpose	: It is used to read the contents from standard input or from output of another command and reproduces the output to boyh in standard output and direct into output to one or more files.
+Syntax	: tee [options] <file name > Example   : $ tee date dat.txt
+
+
+Command	: grep
+Purpose	: It is used to search the specified pattern from one or more files. Syntax	: grep [options] <pattern> <file name >
+Example	: $ grep “anand” devi
+
+
+
+1. c) DIRECTORY COMMANDS AND PROCESS MANAGEMENT
+COMMANDS
+
+Aim
+
+To Study about directory handling and Process Management Commands
+
+Command	: mkdir
+Purpose	: It is used to create new directory or more than one directory. Syntax	: mkdir <directory name >
+Example	: $ mkdir riya
+Command	: rmdir
+Purpose	: It is used to remove the directory if it is empty. Syntax	: rmdir <directory name >
+Example	: $ rmdir riya
+Command	: cd
+Purpose	: It is used to change the control from one working directory to another specified directory.
+Syntax	: cd <directory name >
+Example	: $ cd riya
+
+
+
+
+Command	: cd ..
+Purpose	: It is used to quit from current directory and move to the previous directory.
+Syntax	: cd ..
+Example	: $ cd ..
+Process Commands Command	: echo $$
+Purpose	: It is used to display the process number of the current shell. Syntax	: echo $$
+Example	: $ echo $$
+
+Command	: ps
+Purpose	: It is used to display the attributes of a process. Syntax	: ps
+Example	: $ ps
+$ ps –f ( Display the ancestry of a process )
+$ ps –u ( Display the activities of a user )
+$ ps –a ( Lists processes of all users but not the system processes )
+
+Command	:&
+Purpose	: It is shell operator which is used to run a process in the background. Syntax	: <command> &
+Example	: $ sort emp.txt &
+
+Command	: nohup
+Purpose	: It permits the execution of the process even after the user has logged out. Syntax	: nohup <command>
+Example	: $ nohup sort emp.txt ( result is available on nohup.out )
+
+Command	: kill
+Purpose	: It is used to terminate the process. Syntax	: kill <PID>
+Example	: $ kill 105
+
+Command	: kill $!
+Purpose	: $! is the system variable which stores the process id of the last background job. The command kill $! is used to kill the last process.
+Syntax : kill $!
+Example	: $ kill $!
+Command	: at
+Purpose	: It is used to execute the process at the time specified. Syntax	: echo <time>
+Example	: $ at 14:08 (or) $ at 3 PM (or) $ at 4 :50 AM
